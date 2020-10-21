@@ -7,15 +7,25 @@
 # Written expression
 # Xn = Xn-1 + Xn-2
 
-fib = [1,1]
-x = 1
-a = 1
-b = 0
+def fibonacci_seq():
+    fib = [1,1]
+    limit = 1
+    a = 1
+    b = 0
 
-while x < 100:
-    fib.append(fib[a]+fib[b])
-    a += 1
-    b += 1
-    x += 5
+    while limit < 1000:
+        fib.append(fib[a]+fib[b])
+        a += 1
+        b += 1
+        limit += 5
+    return fib
 
-print(fib)
+def fib_dec():
+    fibo = fibonacci_seq()
+    print(fibo)
+    number = int(input("Enter number: "))
+    if number in fibo:
+        return True
+    return False
+
+print(fib_dec())
