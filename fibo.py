@@ -23,9 +23,16 @@ def fibonacci_seq():
 def fib_dec():
     fibo = fibonacci_seq()
     print(fibo)
-    number = int(input("Enter number: "))
-    if number in fibo:
-        return True
-    return False
+    x = 0
+    while x < 10:
+        number = input("Enter number: ")
+        if number == "":
+            print("Thank you")
+            break
+        else:
+            if int(number) in fibo:
+                print("Yes It is a Fibonacci number")
+            else:
+                print("Nope, try again")
 
 print(fib_dec())
